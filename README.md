@@ -33,4 +33,4 @@ El proyecto incluye varias funcionalidades, destacando una calculadora aritméti
 
 1. Clona este repositorio:
    ```bash
-   git clone https://github.com/tu-usuario/tarea-8-proyecto.git
+  https://github.com/codestiven/Generador-de-cedulas
