@@ -1,0 +1,63 @@
+﻿<style>
+img{
+    margin: 10px;
+    width: 17%;
+}
+
+
+</style>
+
+
+<div class="top-row ps-3 navbar navbar-dark">
+    <div class="container-fluid">
+        <a class="navbar-brand " href="">Tarea 8</a>
+        <button title="Navigation menu" class="navbar-toggler" @onclick="ToggleNavMenu">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+    </div>
+</div>
+
+<div class="@NavMenuCssClass" @onclick="ToggleNavMenu">
+    <nav class="flex-column">
+        <div class="nav-item px-3  mb-2">
+            <NavLink class="nav-link" href="" Match="NavLinkMatch.All">
+               <img src="https://cdn-icons-png.flaticon.com/512/609/609803.png" alt=""> Inicio
+            </NavLink>
+        </div>
+
+        <div class="nav-item px-3 mb-2">
+            <NavLink class="nav-link" href="calculadora">
+                <img class="img" src="https://cdn-icons-png.flaticon.com/512/2344/2344218.png" alt="">Calculadora
+            </NavLink>
+        </div>
+
+        <div class="nav-item px-3 mb-2">
+            <NavLink class="nav-link" href="cedula">
+               <img src="https://cdn-icons-png.flaticon.com/512/1156/1156942.png" alt=""> Cedula
+            </NavLink>
+        </div>
+
+        <div class="nav-item px-3 mb-2">
+            <NavLink class="nav-link" href="temperatura">
+               <img src="https://cdn-icons-png.flaticon.com/512/1684/1684375.png" alt=""> Temperatura
+            </NavLink>
+        </div>
+
+        <div class="nav-item px-3 mb-2">
+            <NavLink class="nav-link" href="acerca_de">
+                <img src="https://cdn-icons-png.flaticon.com/512/560/560216.png" alt=""> Acerca de
+            </NavLink>
+        </div>
+    </nav>
+</div>
+
+@code {
+    private bool collapseNavMenu = true;
+
+    private string? NavMenuCssClass => collapseNavMenu ? "collapse" : null;
+
+    private void ToggleNavMenu()
+    {
+        collapseNavMenu = !collapseNavMenu;
+    }
+}

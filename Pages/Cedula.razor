@@ -1,0 +1,526 @@
+﻿@page "/cedula"
+
+<PageTitle>cedula</PageTitle>
+
+
+<style>
+    .cedula * {
+
+
+        list-style: none;
+
+        z-index: 2;
+
+    }
+
+    .fondo {
+        z-index: 1;
+        top: -100px;
+        position: absolute;
+        width: 120%;
+        right: 5px;
+        opacity: 0.09;
+    }
+
+    .cedula {
+        padding: 30px;
+
+
+        border-radius: 20px;
+        position: relative;
+        top: -20px;
+        margin: auto;
+        margin-top: -10px;
+        background-color: rgb(255, 204, 175);
+        width: 100%;
+        height: auto;
+
+        background: rgb(255, 226, 193);
+        background: linear-gradient(47deg, rgba(255, 226, 193, 1) 0%, rgba(255, 181, 106, 1) 100%);
+
+
+        overflow: hidden;
+        z-index: 0;
+        transform: scale(85%, 85%);
+
+    }
+
+    .arriba {
+
+        display: flex;
+
+    }
+
+    .arriba img {
+
+        z-index: 1000;
+        position: absolute;
+        top: 40px;
+
+
+
+    }
+
+    .arriba h1 {
+
+        font-size: 50px;
+        letter-spacing: 4px;
+        text-transform: uppercase;
+        font-weight: 800;
+
+
+
+        text-align: center;
+
+    }
+
+    .arriba h2 {
+
+        font-size: 30px;
+        letter-spacing: 8px;
+        text-transform: uppercase;
+        font-weight: 800;
+
+
+
+
+
+
+
+        text-align: center;
+
+    }
+
+    .arriba h4 {
+
+        font-size: 25px;
+        letter-spacing: 10px;
+        text-transform: uppercase;
+        font-weight: 800;
+
+
+
+
+        text-align: center;
+
+    }
+
+
+
+
+    .arriba img {
+
+        margin: 10px;
+        width: 100px;
+
+
+    }
+
+    .arriba .jce {
+
+        margin: 10px;
+        width: 150px;
+        position: absolute;
+        left: 85%;
+        top: 30px;
+        transform: scale(120%);
+        filter: grayscale(36%) blur(0.7px) brightness(156%) saturate(131%) contrast(91%);
+
+    }
+
+    .medio {
+        font-size: 30px;
+        letter-spacing: 2px;
+
+        font-weight: 800;
+    }
+
+    .medio h2 {
+        font-size: 25px;
+        letter-spacing: 2px;
+
+        font-weight: 800;
+    }
+
+    .medio h5 {
+        font-size: 30px;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+        font-weight: 800;
+    }
+
+    .medio .img {
+
+        display: flexbox;
+        align-items: center;
+        justify-items: center;
+
+    }
+
+    .medio img {
+
+        margin: auto;
+        width: 100%;
+
+
+
+    }
+
+    .medio .duarte {
+        z-index: 1;
+        position: absolute;
+
+        left: 60%;
+
+        width: 20%;
+
+        filter: grayscale(100%) blur(2px) brightness(149%) saturate(1000%) opacity(5%) contrast(144%);
+        -webkit-filter: grayscale(100%) blur(2px) brightness(149%) saturate(1000%) opacity(5%) contrast(144%);
+        -moz-filter: grayscale(100%) blur(2px) brightness(149%) saturate(1000%) opacity(5%) contrast(144%);
+    }
+
+
+    .lll {
+
+        display: flex;
+        justify-content: space-between;
+
+    }
+
+    .lll * {
+
+        display: flexbox;
+        justify-content: space-between;
+
+    }
+
+    .abajo h1 {
+
+        font-size: 60px;
+
+    }
+
+    .abajo h3 {
+
+        font-size: 35px;
+
+    }
+
+    .la_cedula {
+
+        margin: auto;
+        margin-bottom: 50px;
+
+        left: 35%;
+        line-height: 20px;
+        word-wrap: break-word;
+
+
+        text-align: center;
+        font-size: 60px;
+
+        letter-spacing: 15px;
+
+        font-weight: 800;
+        margin-top: 20px;
+
+    }
+
+    .cedula {
+        display: @visivilidad;
+    }
+
+    .verificador {
+        margin: auto;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+    }
+
+    .verificador input {
+        margin: 0px 10px 0px 10px;
+    }
+
+    .lateral {
+        z-index: 1;
+        position: absolute;
+
+        display: flex;
+
+        transform: translate(-4%, -40px);
+
+        justify-content: flex-end;
+
+        padding: 10px;
+
+    }
+
+    .lateral .mapa {
+        width: 80px;
+        height: 70px;
+        transform: translate(0%, 100px);
+        margin: 5px;
+    }
+
+    .lateral .foto {
+
+        width: 10%;
+        opacity: 0.2;
+    }
+
+    .display * {
+        margin: 0px;
+    }
+
+
+
+.zodiaco {
+        z-index: 1;
+        position: absolute;
+
+        left: 0%;
+        top:150px;
+
+
+
+        transform: scale(20%,20%);
+
+        filter: grayscale(100%) blur(2px) brightness(149%) saturate(1000%) opacity(10%) contrast(144%);
+
+    }
+.mam{
+    margin: auto;
+    display: @visivilidad2;
+}
+</style>
+
+<div class="verificador">
+
+    <input type="text" @bind="entrada"> <button class="btn btn-primary" @onclick="boton">verificar</button>
+
+</div>
+<h1 class="mam">no se encontro cedula</h1>
+
+
+<div class='cedula container-fluid'>
+
+    <img class="fondo" src="https://thumbs.dreamstime.com/b/textura-de-la-esponja-22614387.jpg" alt="">
+    <div class='row arriba flex-container'>
+        <div><img
+                src='https://upload.wikimedia.org/wikipedia/commons/thumb/2/26/Coat_of_arms_of_the_Dominican_Republic.svg/270px-Coat_of_arms_of_the_Dominican_Republic.svg.png'
+                alt=''></div>
+
+
+        <ul>
+            <li>
+                <h1>Republica dominicana</h1>
+            </li>
+            <li>
+                <h2>junta centrar electoral</h2>
+            </li>
+            <li>
+                <h4>cedula de identidad y electoral</h4>
+            </li>
+        </ul>
+
+        <img class="jce"
+            src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/dd/LOGO_JCE.svg/1013px-LOGO_JCE.svg.png" alt="">
+    </div>
+    <div class='row medio container-fluid'>
+
+        <div>
+            <h1 class='la_cedula'>@idcedula</h1>
+        </div>
+        <div class='row img'>
+            <div class='col-3'>
+                <img src='@foto' alt=''>
+            </div>
+            <div class='col-9'>
+                <table class="ccc">
+                    <tr>
+                        <h2> <strong>lugar de nacimiento</strong> </h2>
+                    </tr>
+                    <tr>
+                        <h5>@lugar_nacimiento</h5>
+                    </tr>
+                    <tr>
+                        <h2> <strong>fecha de nacimiento</strong></h2>
+                    </tr>
+                    <tr>
+                        <h5>@FechaNacimiento</h5>
+                    </tr>
+                    <tr class='lll container-fluid'>
+                        <div class='row'>
+                            <ul class='col-6 container-fluid'>
+                                <div class='row'>
+                                    <li class='col-4'>
+                                        <h3> <strong>sexo</strong> </h3>
+                                    </li>
+                                    <li class='col-2'>
+                                        <h2>@sexo</h2>
+                                    </li>
+                                </div>
+
+                            </ul>
+                            <ul class='col-6 display'>
+                                <div class='row'>
+                                    <li class='col-6'>
+                                        <h3> <strong>estado civil</strong> </h3>
+                                    </li>
+                                    <li class='col-4'>
+                                        <h2> @EstadoCivil</h2>
+                                    </li>
+                                </div>
+                            </ul>
+                        </div>
+                    </tr>
+
+                </table>
+            </div>
+
+            <img class="duarte"
+                src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/bd/Juan_Pablo_Duarte.jpg/150px-Juan_Pablo_Duarte.jpg"
+                alt="">
+        </div>
+    <img src="@zodiaco" alt="" class="zodiaco">
+    </div>
+    <div class='row abajo m-2'>
+        <ul>
+            <li>
+                <h1>@nombre</h1>
+            </li>
+            <li>
+                <h3>@apellido @apellido2</h3>
+            </li>
+        </ul>
+
+        <div class="lateral">
+            <img class="mapa" src="https://vemaps.com/uploads/img/do-03.png" alt="">
+            <img class="foto" src="@foto" alt="">
+        </div>
+    </div>
+
+</div>
+
+
+
+@code {
+
+    string entrada = "";
+    string url;
+
+    string nombre, apellido, apellido2, foto, FechaNacimiento, lugar_nacimiento, sexo, EstadoCivil, idcedula;
+
+    bool verificacion;
+    string zodiaco = "";
+    string visivilidad = "none";
+    string visivilidad2 = "none";
+    void boton()
+    {
+
+
+
+
+        url = "https://api.adamix.net/apec/cedula/" + entrada;
+
+
+        System.Net.WebClient client = new System.Net.WebClient();
+        string json = client.DownloadString(url);
+
+
+
+        Root cedulacion = Newtonsoft.Json.JsonConvert.DeserializeObject<Root>(json);
+
+        nombre = cedulacion.Nombres;
+        apellido = cedulacion.Apellido1;
+        apellido2 = cedulacion.Apellido2;
+        foto = cedulacion.foto;
+        lugar_nacimiento = cedulacion.LugarNacimiento;
+        sexo = cedulacion.IdSexo;
+        EstadoCivil = cedulacion.IdEstadoCivil;
+        idcedula = cedulacion.Cedula;
+        FechaNacimiento = cedulacion.FechaNacimiento;
+        verificacion = cedulacion.ok;
+
+
+if(cedulacion.ok == true){
+            var fecha = DateTime.Parse(FechaNacimiento);
+            var dia = fecha.Day;
+            var mes = fecha.Month;
+
+            if (mes == 1)
+            {
+                zodiaco = "https://cdn-icons-png.flaticon.com/512/47/47086.png";
+            }
+
+            if (mes == 2)
+            {
+                zodiaco = "https://cdn-icons-png.flaticon.com/512/47/47246.png";
+            }
+
+            if (mes == 3)
+            {
+                zodiaco = "https://www.pngmart.com/files/5/Pisces-PNG-File.png";
+            }
+
+            if (mes == 4)
+            {
+                zodiaco = "https://cdn-icons-png.flaticon.com/512/47/47290.png";
+            }
+
+            if (mes == 5)
+            {
+                zodiaco = "https://cdn-icons-png.flaticon.com/512/47/47414.png";
+            }
+
+            if (mes == 6)
+            {
+                zodiaco = "https://cdn-icons-png.flaticon.com/512/47/47271.png";
+            }
+
+            if (mes == 7)
+            {
+                zodiaco = "https://cdn-icons-png.flaticon.com/512/47/47279.png";
+            }
+
+            if (mes == 8)
+            {
+                zodiaco = "https://cdn-icons-png.flaticon.com/512/47/47337.png";
+            }
+            if (mes == 9)
+            {
+                zodiaco = "https://cdn-icons-png.flaticon.com/512/47/47148.png";
+            }
+            if (mes == 10)
+            {
+                zodiaco = "https://i.pinimg.com/originals/64/7d/13/647d132f08b3172621d17f0af126a6e2.png";
+            }
+            if (mes == 11)
+            {
+                zodiaco = "https://i.pinimg.com/originals/bb/39/5a/bb395a96a561fad8093ccd3ccc1bfc9d.png";
+            }
+            if (mes == 12)
+            {
+                zodiaco = "https://cdn-icons-png.flaticon.com/512/1994/1994938.png";
+            }
+};
+
+
+
+
+
+
+
+        if (verificacion)
+        {
+            visivilidad = "block";
+            visivilidad2 = "none";
+        }
+        else if(verificacion == false){
+            visivilidad2 = "block";
+        }
+
+    }
+
+}

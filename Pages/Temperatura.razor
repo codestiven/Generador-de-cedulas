@@ -1,0 +1,120 @@
+﻿@page "/temperatura"
+
+<PageTitle>convertidor de temperatura</PageTitle>
+
+
+<style>
+    .titulo {
+
+        text-align: center;
+        display: flex;
+        align-items: center;
+        margin: 30px;
+
+    }
+
+    .titulo img {
+        width: 60px;
+    }
+
+
+
+
+    .ccc>* {
+        margin: auto;
+
+        text-align: center;
+
+    }
+
+    .ccc input {
+        width: 100%;
+    }
+
+    .ccc .row {
+        margin-top: 20px;
+    }
+</style>
+
+
+<div class="titulo">
+    <img src="https://cdn-icons-png.flaticon.com/512/1684/1684375.png" alt="">
+    <h1>convertidor de temperatura</h1>
+</div>
+
+
+<div class="container ccc">
+
+    <div class="row">
+        <div class="col-4">
+            <img src="https://cdn-icons-png.flaticon.com/512/1200/1200398.png" alt="">
+            <input type="number" @bind-value="@C" @onclick="@Verifica1" @onfocus="@Verifica1">
+        </div>
+        <div class="col-4">
+            <img src="https://cdn-icons-png.flaticon.com/512/3815/3815443.png" alt="">
+            <input type="number" @bind-value="@F" @onclick="@Verifica2" @onfocus="@Verifica2">
+        </div>
+        <div class="col-4">
+            <img src="https://cdn-icons-png.flaticon.com/512/3815/3815451.png" alt="">
+            <input type="number" @bind-value="@K" @onclick="@Verifica3" @onfocus="@Verifica3">
+        </div>
+    </div>
+
+
+    <div class="row">
+        <button class="btn btn-primary" @onclick="@convertir">calcular</button>
+    </div>
+
+</div>
+
+
+
+
+
+@code {
+    String ccc;
+    double C;
+    double K;
+    double F;
+
+
+
+    void Verifica2()
+    {
+        ccc = "F";
+    }
+        void Verifica3(){
+        ccc = "K";
+    }
+    void Verifica1()
+    {
+        ccc = "C";
+    }
+
+    void convertir()
+    {
+        if ( ccc == "C")
+        {
+            K = C + 273.15;
+            F = (C * 9 / 5) + 32;
+        }
+        else if ( ccc == "F")
+        {
+            C = (F - 32) * 5 / 9;
+            K = (F - 32) * ((5 / 9) + 273.15);
+        }
+        else if ( ccc == "K")
+        {
+            C = K - 273.15;
+            F = (K - 273.15) * ((9 / 5) + 32);
+        }
+    }
+    string ff = "no";
+    void Ejemplo()
+    {
+    ff = "si";
+    }
+
+
+
+}

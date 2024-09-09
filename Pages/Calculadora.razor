@@ -1,0 +1,142 @@
+﻿@page "/calculadora"
+
+<PageTitle>calculadora</PageTitle>
+
+<style>
+    .titulo {
+
+        text-align: center;
+        display: flex;
+        align-items: center;
+        margin: 30px;
+
+    }
+
+    .titulo img {
+        width: 60px;
+    }
+    .opera {
+
+        text-align: center;
+        display: flex;
+        align-items: center;
+        margin: 30px;
+
+    }
+    .opera > *{
+        margin-left: 5px;
+    }
+    .form-select{
+        width: 7%;
+    }
+
+
+    input[type="number"]
+{
+    -webkit-appearance: textfield !important;
+    margin: 0;
+    -moz-appearance:textfield !important;
+}
+
+.form-select{
+margin: 10px;
+}
+.igual{
+    text-align: center;
+    position: relative;
+    top: 6px;
+}
+
+
+.boton{
+    border-radius: 50px;
+    width: 90px;
+    height: 30;
+    transition: 0.3s;
+    border: none;
+    background-color: #4B8ADB;
+}
+.boton:hover{
+    border-radius: 50px;
+    width: 90px;
+    height: 30;
+
+    transform: scale(110%,110%);
+        background-color: #DB6256;
+}
+.boton:active{
+    border-radius: 50px;
+    width: 90px;
+    height: 30;
+
+    transform: scale(115%,115%);
+        background-color: #983b32;
+}
+
+input{
+    border-radius:5px ;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+}
+</style>
+
+
+<div class="titulo">
+    <img src="https://cdn-icons-png.flaticon.com/512/1176/1176238.png" alt="">
+    <h1>calculadora</h1>
+</div>
+
+
+
+<div class="opera">
+    <input type="number" @bind="num1">
+    <select @bind="signo" class="form-select" aria-label="Default select example">
+        <option value="+" selected>+</option>
+        <option value="-">-</option>
+        <option value="x">X</option>
+        <option value="/">/</option>
+    </select>
+        <input type="number"  @bind="num2"  >
+        <h4 class="igual">=</h4>
+        <input  type="text" disabled value="@resultado">
+
+
+
+    <button @onclick="@salida" class="btn btn-primary boton">calcular</button>
+
+</div>
+
+
+
+@code {
+
+
+
+
+
+string signo = "+";
+
+int num1 = 0;
+int num2 = 0;
+
+int resultado = 0;
+
+void salida(){
+if (signo == "+")
+{
+    resultado = num1 + num2 ;
+}
+if (signo == "-")
+{
+    resultado = num1 - num2 ;
+}
+if (signo == "x")
+{
+    resultado = num1 * num2 ;
+}
+if (signo == "/")
+{
+    resultado = num1 / num2 ;
+}
+}
+
+}
