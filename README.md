@@ -1,50 +1,35 @@
-<h2 align="left">Hi 👋! My name is ... and I'm a ..., from ....</h2>
+# Tarea 8 - Proyecto de Programación
 
-###
+![Imagen de referencia](https://github.com/codestiven/Generador-de-cedulas/blob/master/referencia.png)
 
-<div align="center">
-  <img src="https://github-readme-stats.vercel.app/api?username=codestiven&hide_title=false&hide_rank=false&show_icons=true&include_all_commits=true&count_private=true&disable_animations=false&theme=dracula&locale=en&hide_border=false" height="150" alt="stats graph"  />
-  <img src="https://github-readme-stats.vercel.app/api/top-langs?username=codestiven&locale=en&hide_title=false&layout=compact&card_width=320&langs_count=5&theme=dracula&hide_border=false" height="150" alt="languages graph"  />
-</div>
+### Descripción
 
-###
+Este proyecto fue creado como parte de la asignatura **Fundamentos de Programación** el **22 de julio de 2022**. El proyecto fue desarrollado en **C#** utilizando **.NET** con **Razor Pages**, junto con **HTML**, **CSS** y **Bootstrap** para el diseño de la interfaz.
 
-<img align="right" height="150" src="https://i.imgflip.com/65efzo.gif"  />
+El proyecto incluye varias funcionalidades, destacando una calculadora aritmética, un conversor de temperatura y una sección "Acerca de mí". Además, cuenta con un generador de cédulas que anteriormente estaba conectado a una API pública, pero que actualmente se encuentra privatizada.
 
-###
+### Funcionalidades del proyecto
 
-<div align="left">
-  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" height="30" alt="javascript logo"  />
-  <img width="12" />
-  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg" height="30" alt="typescript logo"  />
-  <img width="12" />
-  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" height="30" alt="react logo"  />
-  <img width="12" />
-  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" height="30" alt="html5 logo"  />
-  <img width="12" />
-  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" height="30" alt="css3 logo"  />
-  <img width="12" />
-  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" height="30" alt="python logo"  />
-  <img width="12" />
-  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/csharp/csharp-original.svg" height="30" alt="csharp logo"  />
-</div>
+1. **Inicio**: Página de bienvenida con acceso a las funcionalidades principales del proyecto.
+   
+2. **Calculadora Aritmética**: Permite realizar operaciones matemáticas básicas como suma, resta, multiplicación y división.
 
-###
+3. **Convertidor de Temperatura**: Convierte valores de temperatura entre grados Celsius, Fahrenheit y Kelvin.
 
-<div align="left">
-  <img src="https://img.shields.io/static/v1?message=Youtube&logo=youtube&label=&color=FF0000&logoColor=white&labelColor=&style=for-the-badge" height="35" alt="youtube logo"  />
-  <img src="https://img.shields.io/static/v1?message=Instagram&logo=instagram&label=&color=E4405F&logoColor=white&labelColor=&style=for-the-badge" height="35" alt="instagram logo"  />
-  <img src="https://img.shields.io/static/v1?message=Gmail&logo=gmail&label=&color=D14836&logoColor=white&labelColor=&style=for-the-badge" height="35" alt="gmail logo"  />
-  <img src="https://img.shields.io/static/v1?message=LinkedIn&logo=linkedin&label=&color=0077B5&logoColor=white&labelColor=&style=for-the-badge" height="35" alt="linkedin logo"  />
-</div>
+4. **Acerca de mí**: Una página informativa sobre el desarrollador del proyecto.
 
-###
+5. **Generador de Cédulas**: Función destacada que generaba cédulas dominicanas utilizando la API pública de Adamix (`https://api.adamix.net/apec/cedula/`). Actualmente, esta API ha sido privatizada, por lo que la funcionalidad no está disponible en este momento.
 
-<br clear="both">
+### Tecnologías Utilizadas
 
-<img src="https://raw.githubusercontent.com/codestiven/codestiven/output/snake.svg" alt="Snake animation" />
+- **C#**
+- **.NET Core 6** con **Razor Pages**
+- **HTML5**
+- **CSS3**
+- **Bootstrap**
+- **API de Generación de Cédulas** (privatizada)
 
-###
+### Instalación
 
 1. Clona este repositorio:
    ```bash
